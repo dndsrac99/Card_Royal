@@ -13392,3 +13392,10 @@
 /Card_Royal/Library/StateCache/LayerSettings/9e/9ecc5c3c162a7aba29bafa64c8b94b7c.json
 /Card_Royal/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json
 /Card_Royal/Library/Style.catalog
+/Card_Royal/Logs/*.log
+/Card_Royal/Packages/*.json
+/Card_Royal/ProjectSettings/*.asset
+/Card_Royal/ProjectSettings/*.txt
+/Card_Royal/UserSettings/*.asset
+/Card_Royal/UserSettings/Layouts/*.dwlt
+/Card_Royal/UserSettings/*.settings
