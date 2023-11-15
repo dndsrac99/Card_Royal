@@ -8,6 +8,11 @@ public enum ManaTypes
     orange, Black, Red, Blue
 }
 
+public enum cardStatus
+{
+    activeM, inactiveM, active, used, inactive
+}
+
 public enum HeroTypes
 {
     Authorithy,Fighter, Army, Underdog

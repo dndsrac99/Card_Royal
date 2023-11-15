@@ -2,14 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hero_Card : Card_Base
+public class Player : MonoBehaviour
 {
-     
+    
     // Start is called before the first frame update
-    public Hero_Card()
-    {
-    }
-
     void Start()
     {
         
@@ -17,12 +13,6 @@ public class Hero_Card : Card_Base
 
     // Update is called once per frame
     void Update()
-    {
-        
-    }
-
-
-    public override void Effect()
     {
         
     }

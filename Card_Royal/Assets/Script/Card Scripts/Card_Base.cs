@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Palmmedia.ReportGenerator.Core.Reporting.Builders;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class Card_Base : MonoBehaviour
@@ -29,17 +31,25 @@ public abstract class Card_Base : MonoBehaviour
 
     public void attack (Card_Base target)
     {
-        int atktotal = (atk - target.def);
-        if (atktotal < 0  ) {
-        
-        }
-        else
-        {
-            if(wp == Enums.Weapon.Blade && target.wp == Enums.Weapon.Blunt)
-            {
+        int attackingAtk = this.atk;
 
-            }
+        if ((this.wp == Enums.Weapon.Blade && target.wp == Enums.Weapon.Blunt) ||
+            (this.wp == Enums.Weapon.Blunt && target.wp == Enums.Weapon.Ranged) ||
+            (this.wp == Enums.Weapon.Ranged && target.wp == Enums.Weapon.Blade))
+        {
+            attackingAtk += 5;
         }
+        else if ((this.wp == Enums.Weapon.Blade && target.wp == Enums.Weapon.Ranged) ||
+                 (this.wp == Enums.Weapon.Blunt && target.wp == Enums.Weapon.Blade) ||
+                 (this.wp == Enums.Weapon.Ranged && target.wp == Enums.Weapon.Blunt))
+        {
+            attackingAtk -= 5;
+        }
+        else{ }
+        int atktotal = (attackingAtk - target.def);
+        target.hp -= atktotal;
+
+
     }
 
 
